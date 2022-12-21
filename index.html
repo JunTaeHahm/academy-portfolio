@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="함준태" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="subject" content="포트폴리오" />
+    <meta
+      name="keywords"
+      content="FrontEnd, Portfolio, 프론트엔드, 포트폴리오, 개발자, 웹퍼블리셔, UI개발자" />
+    <meta name="description" content="동기부여를 찾는 프론트엔드 개발자 함준태 포트폴리오입니다." />
+    <meta
+      property="og:description"
+      content="동기부여를 찾는 프론트엔드 개발자 함준태 포트폴리오입니다." />
+    <meta property="og:image" content="assets/images/thumbnail.png" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <title>JunTae Hahm | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="styles/css/common.css" />
+  </head>
+  <body>
+    <!-- || static -->
+    <div id="static">
+      <div id="cursor"></div>
+      <div id="rolling_banner">
+        <div class="rolling_banner_bg"></div>
+        <div class="rolling_banner_text_wrap">
+          <span class="rolling_banner_text">Develop System</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon1.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop Life</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon2.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop Myself</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon1.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop System</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon2.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop Life</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon1.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop Myself</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon2.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop System</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon1.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop Life</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon2.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop Myself</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon1.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop System</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon2.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop Life</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon1.svg"
+            alt="rolling banner icon" />
+          <span class="rolling_banner_text">Develop Myself</span>
+          <img
+            class="rolling_banner_icon"
+            src="assets/rolling_banner_icon2.svg"
+            alt="rolling banner icon" />
+        </div>
+      </div>
+      <div class="scroll_icon">
+        <span>Scroll down</span>
+      </div>
+      <div class="circle_nav_wrap">
+        <div class="circle_nav_bar"></div>
+        <span class="circle_nav_bar_intro">Intro </span>
+        <span class="circle_nav_bar_profile">Profile</span>
+        <span class="circle_nav_bar_index">Index</span>
+        <span class="circle_nav_bar_project">Project</span>
+        <span class="circle_nav_bar_contact">Contact</span>
+      </div>
+    </div>
+
+    <!-- || main-nav -->
+    <section id="main_nav">
+      <div class="main_nav_wrap">
+        <ul>
+          <li><span>Profile</span></li>
+          <li><span>Index</span></li>
+          <li><span>Project</span></li>
+          <li><span>Contact</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- || header -->
+    <header id="header">
+      <div class="header_menu">
+        <div class="header_menu_icon">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="header_menu_btn">Menu</div>
+      </div>
+      <div class="header_portfolio"></div>
+    </header>
+
+    <!-- || main -->
+    <main id="container">
+      <!-- intro -->
+      <section id="intro">
+        <canvas></canvas>
+        <div class="loading">
+          <div class="loading_bg1"></div>
+          <div class="loading_bg2"></div>
+          <div class="loading_title">
+            <span class="loading_title_heading">&lt;<b>Hahm</b> /&gt;</span>
+          </div>
+          <div class="loading_percent">loading...</div>
+          <div class="loading_process_left_bar"><div class="bar"></div></div>
+          <div class="loading_process_right_bar"><div class="bar"></div></div>
+        </div>
+        <div class="intro_text">
+          <span class="intro_text_hide">
+            <span>Develop <i>System.</i></span>
+          </span>
+          <span class="intro_text_hide">
+            <span><b>Develop</b> <i>Life.</i></span>
+          </span>
+          <span class="intro_text_hide"
+            ><span><b>Develop</b> <i>Myself.</i></span>
+          </span>
+          <span class="intro_text_hide"><span class="name">&lt;JunTae Hahm /&gt;</span></span>
+          <span class="intro_text_hide"><span>Frontend Developer</span></span>
+          <span class="intro_text_hide"><span>2022. Folio.</span></span>
+          <div class="scroll_wrap">
+            <span class="scroll_arrow"></span>
+            <span class="scroll_title">Scroll down</span>
+          </div>
+          <div class="link_wrap">
+            <div class="link_wrap_bg"></div>
+            <a
+              class="link_wrap_profile"
+              target="_blank"
+              href="https://hahm.notion.site/80bf3e445667489f8634595cc71d8af4">
+              <h2>Resume</h2>
+              <p>I'll tell you About me!</p>
+            </a>
+            <div class="link_wrap_project">
+              <h2>Works</h2>
+              <p>There are my Works.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- profile -->
+      <section id="profile">
+        <div class="profile_container">
+          <div class="profile_avatar"></div>
+          <div class="profile_desc_wrap">
+            <div class="profile_desc_catchphrase">
+              <span>
+                <strong>Develop <b>System</b></strong>
+                <strong>Develop <b>Life</b></strong>
+                <strong>Develop <b>Myself</b></strong>
+              </span>
+              <span>
+                <strong>시스템과 사람들의 삶을 개선시켜 얻는 </strong
+                ><strong>동기부여로 지속적인 성장을 하는 프론트엔드 개발자가 되겠습니다.</strong>
+              </span>
+            </div>
+            <div class="profile_desc_info">
+              <div class="profile_desc_about">
+                <div class="profile_desc_about_title">ABOUT ME</div>
+                <div class="profile_desc_about_text"><span>NAME</span><span>함 준 태</span></div>
+                <div class="profile_desc_about_text"><span>BIRTH</span><span>1996. 09.</span></div>
+                <div class="profile_desc_about_text">
+                  <span>PHONE</span><span>010 &middot; 9676 &middot; 3101</span>
+                </div>
+                <div class="profile_desc_about_text">
+                  <span>CHANNEL</span>
+                  <span>
+                    <a target="_blank" href="https://github.com/JunTaeHahm">
+                      <i class="fa-brands fa-github"></i>
+                      Github
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-up-right"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <line x1="17" y1="7" x2="7" y2="17"></line>
+                        <polyline points="8 7 17 7 17 16"></polyline></svg
+                    ></a>
+                    <a target="_blank" href="https://velog.io/@ahuuae">
+                      <i class="fa-solid fa-pen-nib"></i>Velog<svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-up-right"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <line x1="17" y1="7" x2="7" y2="17"></line>
+                        <polyline points="8 7 17 7 17 16"></polyline></svg></a
+                  ></span>
+                </div>
+              </div>
+              <div class="profile_desc_skill">
+                <div class="profile_desc_skill_title">SKILL</div>
+                <div class="profile_desc_skill_icon">
+                  <span><i class="fa-brands fa-html5"></i>HTML5</span>
+                  <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+                  <span><i class="fa-brands fa-square-js"></i>JavaScript</span>
+                  <span><i class="fa-brands fa-react"></i>React</span>
+                  <span
+                    ><i class="styled_icon"
+                      ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M16.214 6.762l-.075.391c-.116.741-.074.953.244 1.228l.307.254-.318 1.418c-.19.846-.423 1.555-.571 1.788-.127.201-.275.497-.307.656-.053.19-.233.381-.508.55-.243.138-.72.508-1.058.805-.27.243-.456.392-.557.456l-.33.261c-.106.17-.166.307-.189.411-.023.107-.01.178.024.23.033.05.09.085.168.107a.954.954 0 00.282.023 3 3 0 00.632-.112c.07-.019.125-.037.173-.053.074-.091.245-.263.548-.562.804-.793 1.111-1.227.794-1.11-.117.042-.064-.064.137-.276.424-.413.667-1.037 1.175-2.994.402-1.545.402-1.567.698-1.567.139 0 .532.024.532.024V6.762h-.902zm3.839 3.165c-.064 0-.17.096-.233.202-.116.19.021.306 1.767 1.396 1.037.657 1.873 1.217 1.852 1.26-.021.031-.868.582-1.883 1.217-1.842 1.142-1.852 1.153-1.683 1.386.212.275 0 .37 2.391-1.122L24 13.155v-.836l-1.937-1.196c-1.047-.656-1.957-1.185-2.01-1.196zm-16.085.117c-.053 0-.963.54-2.01 1.185L0 12.425v.836l1.947 1.217c1.08.666 1.99 1.217 2.032 1.217.042 0 .127-.096.212-.212.127-.201.02-.286-1.768-1.418C.72 12.996.54 12.848.71 12.732c.106-.074.91-.572 1.778-1.111 1.979-1.217 1.873-1.133 1.714-1.387-.063-.105-.17-.2-.233-.19zm8.684.023c-.292-.002-.92.443-2.8 1.978-.081.193-.088.326-.051.412.024.059.068.1.129.13.06.03.138.048.224.055.171.015.373-.012.536-.044l.11-.025a.386.386 0 01.144-.118c.116-.064.603-.508 1.09-.984.857-.868 1.058-1.26.709-1.387a.24.24 0 00-.09-.017zm2.196.603c-.257.007-.72.305-1.513.938-.398.323-.65.497-.785.533l-.524.414c-.197.36-.226.583-.174.706a.25.25 0 00.138.134.644.644 0 00.24.045 2.18 2.18 0 00.58-.085 3.466 3.466 0 00.291-.092l.029-.012.053-.028c.1-.129.33-.372.618-.652.91-.878 1.375-1.502 1.28-1.735-.043-.113-.117-.17-.233-.166zm-2.424 1.08c-.074.008-.24.136-.539.398-.432.382-.903.602-1.066.504a3.97 3.97 0 01-.114.024c-.166.033-.373.06-.558.045a.708.708 0 01-.252-.063.337.337 0 01-.168-.17c-.037-.09-.037-.202.005-.345l-.65.534-1.471 1.217V15.867l4.82-3.797a.41.41 0 01.016-.123c.037-.134.035-.202-.023-.196zm2.074.639c-.073 0-.195.103-.39.31-.265.283-.682.557-.903.613l-.034.018a2.191 2.191 0 01-.11.042c-.06.02-.138.044-.228.068-.18.049-.404.094-.604.089a.732.732 0 01-.275-.054.344.344 0 01-.184-.18c-.058-.139-.035-.334.092-.611L7.61 16.033v1.205h1.868l3.962-3.112c.103-.114.258-.27.467-.465.56-.519.687-.698.687-.963 0-.206-.023-.31-.096-.31zm.943 1.95l-.339.338c-.19.18-.529.402-.761.497l-.046.02-.003.005-.01.01c-.009.007-.013.008-.02.011a3.432 3.432 0 01-.282.093 3.058 3.058 0 01-.65.115 1.035 1.035 0 01-.31-.027.364.364 0 01-.218-.144c-.048-.074-.062-.173-.035-.295a1.11 1.11 0 01.095-.25l-3.197 2.526h4.252l.508-.582c.698-.814 1.016-1.396 1.016-1.894z" /></svg></i
+                    >Styled-Components</span
+                  >
+                  <span><i class="fa-brands fa-sass"></i>Sass</span>
+                  <span>
+                    <i class="firebase_icon"
+                      ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z" /></svg></i
+                    >Firebase</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- index -->
+      <section id="index">
+        <div class="index_container">
+          <div class="index_list">
+            <div class="list"><span>Index</span><span>Project</span></div>
+            <div class="list"><span>01</span><span class="list_ani">SAMSUNG EM</span></div>
+            <div class="list"><span>02</span><span class="list_ani">CJ ONE</span></div>
+            <div class="list"><span>03</span><span class="list_ani">Dalkomm Coffee</span></div>
+            <div class="list"><span>04</span><span class="list_ani">Messenger</span></div>
+            <div class="list"><span>05</span><span class="list_ani">What's Movie</span></div>
+            <div class="list"><span>06</span><span class="list_ani">Family Park</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- project -->
+      <section id="project">
+        <div class="project_banner_wrap"></div>
+        <div class="project_section">
+          <div class="project_01">
+            <div class="project_container">
+              <div class="project_container_mockup">
+                <div class="mockup_01_iMac">
+                  <img src="assets/mockup/mockup_iMac.png" alt="아이맥 목업" />
+                  <div class="screen"></div>
+                </div>
+              </div>
+              <div class="project_container_desc">
+                <dl>
+                  <dt>Overview</dt>
+                  <dd><b>웹 컨텐츠 접근성 지침과 웹표준을 준수</b>하여 삼성전기 사이트 제작</dd>
+                  <dt>Description</dt>
+                  <dd>&middot; <b>웹 콘텐츠의 접근성 지침과 웹 표준을 준수</b></dd>
+                  <dd>&middot; HTML / CSS <b>W3C 유효성 검사 통과</b></dd>
+                  <dd>
+                    &middot; CSS와 JavaScript를 사용해 리뉴얼 된 삼성전기 홈페이지의 인터랙션과
+                    디자인 적용
+                  </dd>
+                  <dt>Built by</dt>
+                  <dd>
+                    <i class="fa-brands fa-html5"></i> HTML
+                    <i class="fa-brands fa-css3-alt"></i> CSS3
+                    <i class="fa-brands fa-square-js"></i> JavaScript
+                  </dd>
+                </dl>
+                <div class="project_container_desc_link_wrap">
+                  <a target="_blank" href="https://juntaehahm.github.io/web-clone-samsung-em/">
+                    <span class="link_circle"><span class="arrow"></span></span>Main
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://juntaehahm.github.io/web-clone-samsung-em/sub1.html">
+                    <span class="link_circle"><span class="arrow"></span></span>Sub1
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://juntaehahm.github.io/web-clone-samsung-em/sub2.html"
+                    ><span class="link_circle"><span class="arrow"></span></span>Sub2</a
+                  >
+                  <a target="_blank" href="https://github.com/JunTaeHahm/web-clone-samsung-em"
+                    ><span class="link_circle"><i class="fa-brands fa-github"></i></span>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project_02">
+            <div class="project_container">
+              <div class="project_container_mockup">
+                <div class="mockup_02_iMac">
+                  <img src="assets/mockup/mockup_iMac.png" alt="아이맥 목업" />
+                  <div class="screen"></div>
+                </div>
+                <div class="mockup_02_Macbook">
+                  <img src="assets/mockup/mockup_Macbook.png" alt="맥북 목업" />
+                  <div class="screen"></div>
+                </div>
+                <div class="mockup_02_iPad">
+                  <img src="assets/mockup/mockup_iPad.png" alt="아이패드 목업" />
+                  <div class="screen"></div>
+                </div>
+                <div class="mockup_02_iPhone">
+                  <div class="screen"></div>
+                  <img src="assets/mockup/mockup_iPhone.png" alt="아이폰 목업" />
+                </div>
+              </div>
+              <div class="project_container_desc">
+                <dl>
+                  <dt>Overview</dt>
+                  <dd>
+                    CJ ONE 홈페이지의 PC, 태블릿, 모바일 등 디바이스의 해상도에 맞는
+                    <b>반응형 웹사이트</b> 제작
+                  </dd>
+                  <dt>Description</dt>
+                  <dd>
+                    &middot; CSS의 미디어 쿼리를 사용해 디바이스의 해상도에 맞게 자동으로 레이아웃이
+                    변경되는 <b>반응형 웹 구현</b><br />
+                    &middot; 이미지 배열 생성을 통해 <b>GIF Animation 구현</b><br />
+                    &middot; JavaScript를 사용해 Nav Bar, Auto Banner 등 다양한
+                    <b>인터랙션 구현</b>
+                  </dd>
+                  <dt>Built by</dt>
+                  <dd>
+                    <i class="fa-brands fa-html5"></i> HTML
+                    <i class="fa-brands fa-css3-alt"></i> CSS3
+                    <i class="fa-brands fa-square-js"></i> JavaScript
+                  </dd>
+                </dl>
+                <div class="project_container_desc_link_wrap">
+                  <a target="_blank" href="https://juntaehahm.github.io/web-clone-cj-one/"
+                    ><span class="link_circle"><span class="arrow"></span></span>Web</a
+                  >
+                  <a target="_blank" href="https://github.com/JunTaeHahm/web-clone-cj-one"
+                    ><span class="link_circle"><i class="fa-brands fa-github"></i></span>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project_03">
+            <div class="project_container">
+              <div class="project_container_mockup">
+                <div class="mockup_03_iMac">
+                  <img src="assets/mockup/mockup_iMac.png" alt="아이맥 목업" />
+                  <div class="screen"></div>
+                </div>
+                <div class="mockup_03_Macbook">
+                  <img src="assets/mockup/mockup_Macbook.png" alt="맥북 목업" />
+                  <div class="screen"></div>
+                </div>
+                <div class="mockup_03_iPad">
+                  <img src="assets/mockup/mockup_iPad.png" alt="아이패드 목업" />
+                  <div class="screen"></div>
+                </div>
+                <div class="mockup_03_iPhone">
+                  <div class="screen"></div>
+                  <img src="assets/mockup/mockup_iPhone.png" alt="아이폰 목업" />
+                </div>
+              </div>
+              <div class="project_container_desc">
+                <dl>
+                  <dt>Overview</dt>
+                  <dd>
+                    달콤커피 홈페이지의 PC, 태블릿, 모바일 등 디바이스의 해상도에 맞는
+                    <b>반응형 웹사이트</b> 제작
+                  </dd>
+                  <dt>Description</dt>
+                  <dd>
+                    &middot; CSS의 미디어 쿼리를 사용해 디바이스의 해상도에 맞게 자동으로 레이아웃이
+                    변경되는 <b>반응형 웹 구현</b><br />
+                    &middot; JavaScript를 사용해 Nav Bar, Auto Banner 등 다양한 <b>인터랙션 구현</b
+                    ><br />
+                    &middot; 마우스 위치에 따라 움직이는 <b>SVG 애니메이션 적용인터랙션 구현</b>
+                  </dd>
+                  <dt>Built by</dt>
+                  <dd>
+                    <i class="fa-brands fa-html5"></i> HTML
+                    <i class="fa-brands fa-css3-alt"></i> CSS3
+                    <i class="fa-brands fa-square-js"></i> JavaScript
+                  </dd>
+                </dl>
+                <div class="project_container_desc_link_wrap">
+                  <a target="_blank" href="https://juntaehahm.github.io/web-clone-dalkomm-coffee/"
+                    ><span class="link_circle"><span class="arrow"></span></span>Main</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://juntaehahm.github.io/web-clone-dalkomm-coffee/sub1.html"
+                    ><span class="link_circle"><span class="arrow"></span></span>Sub1</a
+                  >
+                  <a
+                    target="_blank"
+                    href="https://juntaehahm.github.io/web-clone-dalkomm-coffee/sub2.html"
+                    ><span class="link_circle"><span class="arrow"></span></span>Sub2</a
+                  >
+                  <a target="_blank" href="https://github.com/JunTaeHahm/web-clone-dalkomm-coffee"
+                    ><span class="link_circle"><i class="fa-brands fa-github"></i></span>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project_04">
+            <div class="project_container">
+              <div class="project_container_mockup">
+                <div class="mockup_04_iPhone">
+                  <video autoplay loop muted class="screen">
+                    <source src="assets/capture/messenger.mp4" type="video/mp4" />
+                  </video>
+                  <img src="assets/mockup/mockup_iPhone.png" alt="아이폰 목업" />
+                </div>
+              </div>
+              <div class="project_container_desc">
+                <dl>
+                  <dt>Overview</dt>
+                  <dd>
+                    <b>React</b>와 <b>Firebase</b>를 사용해 간단한 <b>CRUD</b>가 가능한 채팅
+                    애플리케이션 <b>SPA</b> 제작
+                  </dd>
+                  <dt>Description</dt>
+                  <dd>
+                    &middot; React의 <b>JSX문법</b>과 <b>Sass로</b> 기본적인 UI 구현<br />
+                    &middot; <b>Firebase</b>의 데이터베이스/스토리지 서비스를 사용해
+                    <b>채팅/프로필 변경/사진 전송</b> 기능 구현<br />
+                    &middot; <b>Firebase</b>의 인증 서비스를 사용해
+                    <b>이메일 및 소셜 로그인</b> 기능 구현<br />
+                    &middot; <b>Axios</b>를 사용한 API호출로 데이터 전달<br />
+                    &middot; <b>Hook 함수(uesEffect/useState)</b>를 사용해 데이터 전달 및 관리<br />
+                  </dd>
+                  <dt>Built by</dt>
+                  <dd>
+                    <i class="fa-brands fa-html5"></i> HTML(JSX)
+                    <i class="fa-brands fa-sass"></i> Sass <i class="fa-brands fa-react"></i> React
+                    <i class="firebase_icon"
+                      ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>Firebase</title>
+                        <path
+                          d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z" /></svg
+                    ></i>
+                    Firebase<br />
+                    <i class="styled_icon"
+                      ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>styled-components</title>
+                        <path
+                          d="M16.214 6.762l-.075.391c-.116.741-.074.953.244 1.228l.307.254-.318 1.418c-.19.846-.423 1.555-.571 1.788-.127.201-.275.497-.307.656-.053.19-.233.381-.508.55-.243.138-.72.508-1.058.805-.27.243-.456.392-.557.456l-.33.261c-.106.17-.166.307-.189.411-.023.107-.01.178.024.23.053.05.09.085.168.107a.954.954 0 00.282.023 3 3 0 00.632-.112c.07-.019.125-.037.173-.053.074-.091.245-.263.548-.562.804-.793 1.111-1.227.794-1.11-.117.042-.064-.064.137-.276.424-.413.667-1.037 1.175-2.994.402-1.545.402-1.567.698-1.567.139 0 .532.024.532.024V6.762h-.902zm3.839 3.165c-.064 0-.17.096-.233.202-.116.19.021.306 1.767 1.396 1.037.657 1.873 1.217 1.852 1.26-.021.031-.868.582-1.883 1.217-1.842 1.142-1.852 1.153-1.683 1.386.212.275 0 .37 2.391-1.122L24 13.155v-.836l-1.937-1.196c-1.047-.656-1.957-1.185-2.01-1.196zm-16.085.117c-.053 0-.963.54-2.01 1.185L0 12.425v.836l1.947 1.217c1.08.666 1.99 1.217 2.032 1.217.042 0 .127-.096.212-.212.127-.201.02-.286-1.768-1.418C.72 12.996.54 12.848.71 12.732c.106-.074.91-.572 1.778-1.111 1.979-1.217 1.873-1.133 1.714-1.387-.063-.105-.17-.2-.233-.19zm8.684.023c-.292-.002-.92.443-2.8 1.978-.081.193-.088.326-.051.412.024.059.068.1.129.13.06.03.138.048.224.055.171.015.373-.012.536-.044l.11-.025a.386.386 0 01.144-.118c.116-.064.603-.508 1.09-.984.857-.868 1.058-1.26.709-1.387a.24.24 0 00-.09-.017zm2.196.603c-.257.007-.72.305-1.513.938-.398.323-.65.497-.785.533l-.524.414c-.197.36-.226.583-.174.706a.25.25 0 00.138.134.644.644 0 00.24.045 2.18 2.18 0 00.58-.085 3.466 3.466 0 00.291-.092l.029-.012.053-.028c.1-.129.33-.372.618-.652.91-.878 1.375-1.502 1.28-1.735-.043-.113-.117-.17-.233-.166zm-2.424 1.08c-.074.008-.24.136-.539.398-.432.382-.903.602-1.066.504a3.97 3.97 0 01-.114.024c-.166.033-.373.06-.558.045a.708.708 0 01-.252-.063.337.337 0 01-.168-.17c-.037-.09-.037-.202.005-.345l-.65.534-1.471 1.217V15.867l4.82-3.797a.41.41 0 01.016-.123c.037-.134.035-.202-.023-.196zm2.074.639c-.073 0-.195.103-.39.31-.265.283-.682.557-.903.613l-.034.018a2.191 2.191 0 01-.11.042c-.06.02-.138.044-.228.068-.18.049-.404.094-.604.089a.732.732 0 01-.275-.054.344.344 0 01-.184-.18c-.058-.139-.035-.334.092-.611L7.61 16.033v1.205h1.868l3.962-3.112c.103-.114.258-.27.467-.465.56-.519.687-.698.687-.963 0-.206-.023-.31-.096-.31zm.943 1.95l-.339.338c-.19.18-.529.402-.761.497l-.046.02-.003.005-.01.01c-.009.007-.013.008-.02.011a3.432 3.432 0 01-.282.093 3.058 3.058 0 01-.65.115 1.035 1.035 0 01-.31-.027.364.364 0 01-.218-.144c-.048-.074-.062-.173-.035-.295a1.11 1.11 0 01.095-.25l-3.197 2.526h4.252l.508-.582c.698-.814 1.016-1.396 1.016-1.894z" /></svg
+                    ></i>
+                    Styled-Components
+                    <i class="fa-brands fa-github"></i> Github Pages
+                  </dd>
+                </dl>
+                <div class="project_container_desc_link_wrap">
+                  <a
+                    class="messenger"
+                    target="_blank"
+                    href="https://juntaehahm.github.io/project-messenger/"
+                    ><span class="link_circle"><span class="arrow"></span></span>App</a
+                  >
+                  <a target="_blank" href="https://github.com/JunTaeHahm/project-messenger"
+                    ><span class="link_circle"><i class="fa-brands fa-github"></i></span>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project_05">
+            <div class="project_container">
+              <div class="project_container_mockup">
+                <div class="mockup_05_iMac">
+                  <video autoplay loop muted class="screen">
+                    <source src="assets/capture/whats_movie.mp4" type="video/mp4" />
+                  </video>
+                  <img src="assets/mockup/mockup_iMac.png" alt="아이맥 목업" />
+                </div>
+              </div>
+              <div class="project_container_desc">
+                <dl>
+                  <dt>Overview</dt>
+                  <dd>
+                    <b>React</b>와 <b>Firebase</b>를 사용해 영화 애플리케이션을 반응형
+                    <b>SPA</b> 제작
+                  </dd>
+                  <dt>Description</dt>
+                  <dd>
+                    &middot; 일부 컴포넌트 <b>Styled-Components</b>를 사용해 스타일 적용<br />
+                    &middot; <b>Axios</b>를 사용한 API호출로 데이터 전달<br />
+                    &middot; <b>Hook 함수(uesEffect / useState)</b>를 사용해 데이터 전달 및 관리<br />
+                    &middot; <b>Firebase</b>의 인증 서비스를 사용해
+                    <b>이메일 및 소셜 로그인</b> 기능 구현<br />
+                    &middot; <b>Swipe 라이브러리</b>로 영화배열의 스와이프 기능을 구현<br />
+                    &middot; 검색 창에 키보드 타이핑이 끝날 때 까지 기다리는
+                    <b>Debouncing 사용자 함수</b> 생성<br />
+                    &middot; 모달 창 밖을 클릭하면 닫히는 <b>onClickOutside 사용자 함수 생성</b
+                    ><br />
+                  </dd>
+                  <dt>Built by</dt>
+                  <dd>
+                    <i class="fa-brands fa-html5"></i> HTML(JSX)
+                    <i class="fa-brands fa-css3-alt"></i> CSS3
+                    <i class="fa-brands fa-react"></i> React
+                    <i class="firebase_icon"
+                      ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>Firebase</title>
+                        <path
+                          d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z" /></svg
+                    ></i>
+                    Firebase<br />
+                    <i class="styled_icon"
+                      ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>styled-components</title>
+                        <path
+                          d="M16.214 6.762l-.075.391c-.116.741-.074.953.244 1.228l.307.254-.318 1.418c-.19.846-.423 1.555-.571 1.788-.127.201-.275.497-.307.656-.053.19-.233.381-.508.55-.243.138-.72.508-1.058.805-.27.243-.456.392-.557.456l-.33.261c-.106.17-.166.307-.189.411-.023.107-.01.178.024.23.053.05.09.085.168.107a.954.954 0 00.282.023 3 3 0 00.632-.112c.07-.019.125-.037.173-.053.074-.091.245-.263.548-.562.804-.793 1.111-1.227.794-1.11-.117.042-.064-.064.137-.276.424-.413.667-1.037 1.175-2.994.402-1.545.402-1.567.698-1.567.139 0 .532.024.532.024V6.762h-.902zm3.839 3.165c-.064 0-.17.096-.233.202-.116.19.021.306 1.767 1.396 1.037.657 1.873 1.217 1.852 1.26-.021.031-.868.582-1.883 1.217-1.842 1.142-1.852 1.153-1.683 1.386.212.275 0 .37 2.391-1.122L24 13.155v-.836l-1.937-1.196c-1.047-.656-1.957-1.185-2.01-1.196zm-16.085.117c-.053 0-.963.54-2.01 1.185L0 12.425v.836l1.947 1.217c1.08.666 1.99 1.217 2.032 1.217.042 0 .127-.096.212-.212.127-.201.02-.286-1.768-1.418C.72 12.996.54 12.848.71 12.732c.106-.074.91-.572 1.778-1.111 1.979-1.217 1.873-1.133 1.714-1.387-.063-.105-.17-.2-.233-.19zm8.684.023c-.292-.002-.92.443-2.8 1.978-.081.193-.088.326-.051.412.024.059.068.1.129.13.06.03.138.048.224.055.171.015.373-.012.536-.044l.11-.025a.386.386 0 01.144-.118c.116-.064.603-.508 1.09-.984.857-.868 1.058-1.26.709-1.387a.24.24 0 00-.09-.017zm2.196.603c-.257.007-.72.305-1.513.938-.398.323-.65.497-.785.533l-.524.414c-.197.36-.226.583-.174.706a.25.25 0 00.138.134.644.644 0 00.24.045 2.18 2.18 0 00.58-.085 3.466 3.466 0 00.291-.092l.029-.012.053-.028c.1-.129.33-.372.618-.652.91-.878 1.375-1.502 1.28-1.735-.043-.113-.117-.17-.233-.166zm-2.424 1.08c-.074.008-.24.136-.539.398-.432.382-.903.602-1.066.504a3.97 3.97 0 01-.114.024c-.166.033-.373.06-.558.045a.708.708 0 01-.252-.063.337.337 0 01-.168-.17c-.037-.09-.037-.202.005-.345l-.65.534-1.471 1.217V15.867l4.82-3.797a.41.41 0 01.016-.123c.037-.134.035-.202-.023-.196zm2.074.639c-.073 0-.195.103-.39.31-.265.283-.682.557-.903.613l-.034.018a2.191 2.191 0 01-.11.042c-.06.02-.138.044-.228.068-.18.049-.404.094-.604.089a.732.732 0 01-.275-.054.344.344 0 01-.184-.18c-.058-.139-.035-.334.092-.611L7.61 16.033v1.205h1.868l3.962-3.112c.103-.114.258-.27.467-.465.56-.519.687-.698.687-.963 0-.206-.023-.31-.096-.31zm.943 1.95l-.339.338c-.19.18-.529.402-.761.497l-.046.02-.003.005-.01.01c-.009.007-.013.008-.02.011a3.432 3.432 0 01-.282.093 3.058 3.058 0 01-.65.115 1.035 1.035 0 01-.31-.027.364.364 0 01-.218-.144c-.048-.074-.062-.173-.035-.295a1.11 1.11 0 01.095-.25l-3.197 2.526h4.252l.508-.582c.698-.814 1.016-1.396 1.016-1.894z" /></svg
+                    ></i>
+                    Styled-Components
+                    <i class="fa-brands fa-github"></i> Github Pages
+                  </dd>
+                </dl>
+                <div class="project_container_desc_link_wrap">
+                  <a
+                    id="movie_app"
+                    target="_blank"
+                    href="https://juntaehahm.github.io/project-whats-movie/"
+                    ><span class="link_circle"><span class="arrow"></span></span>App</a
+                  >
+                  <a target="_blank" href="https://github.com/JunTaeHahm/project-whats-movie"
+                    ><span class="link_circle"><i class="fa-brands fa-github"></i></span>Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project_06">
+            <div class="project_container">
+              <div class="project_container_mockup">
+                <div class="mockup_06_iPhone">
+                  <div class="screen"></div>
+                  <img src="assets/mockup/mockup_iPhone.png" alt="아이폰 목업" />
+                </div>
+              </div>
+              <div class="project_container_desc">
+                <dl>
+                  <dt>Overview</dt>
+                  <dd>
+                    국내의 모든 <b>추모시설</b>의 비교분석/정보확인/예약/결제/사후관리 등의 기능이
+                    통합된 <b>React</b>기반 추모시설 앱 프로젝트 기획
+                  </dd>
+                  <dt>Description</dt>
+                  <dd>
+                    &middot; 기존 추모시설의 인터넷 웹사이트를 통해 개별로 여러 시설을 사용자가 직접
+                    비교하거나 정보를 알아봐야 하는 번거로움에서 시작된 기획<br />
+                    &middot; <b>Figma</b>를 이용해 기초 와이어프레임 제작<br />
+                    &middot; 추후 <b>React</b> 프로젝트로 제작 예정<br />
+                    &middot; 아래 링크를 통해 <b>기획서 및 와이어프레임</b> 확인 가능
+                  </dd>
+                </dl>
+                <div class="project_container_desc_link_wrap">
+                  <a
+                    target="_blank"
+                    href="https://www.figma.com/file/2WQnp58m1y0Hs4d7ORo7hd/Family-Park-by-JunTae-Hahm?node-id=0%3A1&t=PfGRqDkiV8y4vWdh-0"
+                    ><span class="link_circle"
+                      ><i class="figma_icon"
+                        ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <title>Figma</title>
+                          <path
+                            d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z" /></svg></i></span
+                    >Figma</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section id="contact">
+        <div class="contact_container">
+          <div class="contact_desc_wrap">
+            <div class="contact_desc">
+              <span>Nice to meet you.</span>
+              <span>Our Connection’s here.</span>
+            </div>
+          </div>
+          <div class="contact_link_wrap">
+            <div class="contact_link">
+              <a href="tel:010-9676-3101"
+                ><span
+                  ><i class="fa-solid fa-phone"></i>Phone<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-arrow-up-right"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="8 7 17 7 17 16"></polyline></svg></span
+              ></a>
+              <a href="mailto:ahuuae_@kakao.com,jth5287@naver.com,jth5287@icloud.com"
+                ><span
+                  ><i class="fa-solid fa-envelope"></i>Email<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-arrow-up-right"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="8 7 17 7 17 16"></polyline></svg></span
+              ></a>
+              <a href="https://github.com/JunTaeHahm" target="_blank"
+                ><span
+                  ><i class="fa-brands fa-github"></i>Github<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-arrow-up-right"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="8 7 17 7 17 16"></polyline></svg></span
+              ></a>
+              <a href="https://velog.io/@ahuuae" target="_blank"
+                ><span
+                  ><i class="fa-solid fa-pen-nib"></i>Velog<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-arrow-up-right"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <line x1="17" y1="7" x2="7" y2="17"></line>
+                    <polyline points="8 7 17 7 17 16"></polyline></svg></span
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="contact_footer">&copy;2022 JunTae Hahm All Rights Reserved.</div>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/8713242aa2.js" crossorigin="anonymous"></script>
+  </body>
+</html>
