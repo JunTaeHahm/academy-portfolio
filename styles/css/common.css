@@ -909,7 +909,7 @@ canvas {
   margin-right: 1rem;
   padding: 0.1rem 0.5rem;
   border: 0.5px solid var(--main-color-black);
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   color: var(--main-color-black);
   font-family: var(--Montserrat);
   font-size: 0.7rem;

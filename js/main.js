@@ -1,3 +1,4 @@
+'use strict';
 // main.js
 /* --------------------------------------------------------Variable */
 /* || Static variable */
@@ -699,7 +700,14 @@ const colorCodes = [
   '213,0,0', // 넷플릭스
   '48,62,79', // 패밀리파크
 ];
+
 function canvasFunc(canvas_width, canvas_height, right, top, opacity, colorCode) {
+  let width;
+  let height;
+  let target;
+  let canvas;
+  let ctx;
+  let points = [];
   let animateHeader = true;
 
   initHeader();
@@ -710,13 +718,13 @@ function canvasFunc(canvas_width, canvas_height, right, top, opacity, colorCode)
     height = canvas_height;
     target = { x: width / 2, y: height / 2 };
     canvas = document.querySelector('canvas');
+    ctx = canvas.getContext('2d');
     canvas.style.opacity = opacity;
     canvas.style.right = `${right}vw`;
     canvas.style.top = `${top}vh`;
     canvas.width = width;
     canvas.height = height;
-    ctx = canvas.getContext('2d');
-    points = [];
+
     for (let x = 0; x < width; x = x + width / 6) {
       for (let y = 0; y < height; y = y + height / 6) {
         let px = x + (Math.random() * width) / 6;
