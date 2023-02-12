@@ -2,9 +2,11 @@
 
 @import url(../css/reset.css);
 @import url(../css/fonts.css);
-/* ---------------------------------------------------------------- */
+@import url(../css/icons.css);
 
-/* || root fonts & colors */
+/*======================================================
+                  root colors & fonts 
+======================================================*/
 :root {
   /* color */
   --main-color-white: #eae9e7;
@@ -28,60 +30,9 @@
   --Montserrat: 'Montserrat', sans-serif;
 }
 
-/* || icons color list */
-@media all and (min-width: 0px) {
-  i svg {
-    position: relative;
-    top: -0.1rem;
-    width: 1rem;
-    height: 1rem;
-    vertical-align: middle;
-  }
-  .figma_icon svg {
-    fill: #f24e1e;
-  }
-  .firebase_icon svg {
-    fill: #ffca28;
-  }
-  .styled_icon svg {
-    fill: #db7093;
-  }
-  .github-page_icon svg {
-    fill: #f05032;
-  }
-  .next_icon svg {
-    fill: #000;
-  }
-  .typescript_icon svg {
-    fill: #3178c6;
-  }
-  .redux_icon svg {
-    fill: #764abc;
-  }
-  .fa-github {
-    color: #000;
-  }
-  .fa-git-alt {
-    color: #f05032;
-  }
-  .fa-html5 {
-    color: #e34f26;
-  }
-  .fa-css3-alt {
-    color: #1572b6;
-  }
-  .fa-square-js {
-    color: #f7df1e;
-  }
-  .fa-react {
-    color: #61dafb;
-  }
-  .fa-sass {
-    color: #cc6699;
-  }
-}
-
-/* || Responsive font size */
+/*======================================================
+                  Responsive font size
+======================================================*/
 @media screen and (max-width: 768px) {
   :root {
     font-size: 14px;
@@ -107,9 +58,10 @@
     font-size: 24px;
   }
 }
-/* ---------------------------------------------------------------- */
 
-/* || static */
+/*======================================================
+                        static
+======================================================*/
 body {
   overflow: hidden;
   background-color: var(--main-color-white);
@@ -123,7 +75,9 @@ canvas {
   transition: all 1.5s cubic-bezier(0.49, 0.19, 0.51, 1.27);
 }
 
-/* || cursor */
+/*======================================================
+                        cursor
+======================================================*/
 #cursor {
   position: absolute;
   top: -100%;
@@ -172,7 +126,10 @@ canvas {
   background-color: #999;
   transition: width 0.5s ease, height 0.5s ease;
 }
-/* || rolling_banner */
+
+/*======================================================
+                    rolling banner
+======================================================*/
 #rolling_banner {
   position: fixed;
   top: 0;
@@ -241,7 +198,10 @@ canvas {
   color: var(--point-color-orange);
   transition: all 0.5s ease;
 }
-/* || project scroll icon */
+
+/*======================================================
+                  project scroll icon
+======================================================*/
 .scroll_icon,
 .scroll_icon:before {
   position: fixed;
@@ -354,7 +314,9 @@ canvas {
   transform: rotate(-80deg);
 }
 
-/* || main nav */
+/*======================================================
+                  main navigation
+======================================================*/
 #main_nav {
   position: fixed;
   top: 0;
@@ -418,9 +380,10 @@ canvas {
   transform: scale(1);
   transition: all 0.5s ease;
 }
-/* ---------------------------------------------------------------- */
 
-/* || Header */
+/*======================================================
+                        Header
+======================================================*/
 #header {
   position: fixed;
   top: 0;
@@ -543,9 +506,9 @@ canvas {
   opacity: 1;
 }
 
-/* ---------------------------------------------------------------- */
-
-/* intro */
+/*======================================================
+                        Intro
+======================================================*/
 #intro {
   position: relative;
   width: 100vw;
@@ -646,12 +609,12 @@ canvas {
   top: 50%;
   left: 50%;
   display: flex;
-  gap: 0.3rem;
-  padding-top: 1rem;
   flex-direction: column;
   justify-content: center;
+  gap: 0.3rem;
   width: 80%;
   height: 70%;
+  padding-top: 1rem;
   color: var(--main-color-black);
   font-family: var(--IvyMode-Light);
   font-size: 7vw;
@@ -675,17 +638,17 @@ canvas {
 .intro_text_hide:nth-last-of-type(1),
 .intro_text_hide:nth-last-of-type(2),
 .intro_text_hide:nth-last-of-type(3) {
+  min-height: 2.3vw;
   font-size: 2vw;
   text-align: right;
-  min-height: 2.3vw;
 }
 .intro_text_hide:nth-last-of-type(2) {
-  font-size: 1vw;
   min-height: 1.2vw;
+  font-size: 1vw;
 }
 .intro_text_hide:nth-last-of-type(1) {
-  font-size: 0.9vw;
   min-height: 1.1vw;
+  font-size: 0.9vw;
 }
 .intro_text_hide span {
   display: block;
@@ -696,12 +659,12 @@ canvas {
   position: relative;
   display: flex;
   width: 60%;
+  min-height: 30%;
   font-family: var(--Montserrat);
   font-size: 1rem;
   transform: scaleY(0);
   transform-origin: center bottom;
   transition: transform 0.3s cubic-bezier(0.65, 0, 0.076, 1);
-  min-height: 30%;
 }
 .link_wrap_bg {
   content: '';
@@ -720,15 +683,15 @@ canvas {
 .link_wrap_profile,
 .link_wrap_project {
   position: relative;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+  box-sizing: border-box;
   width: 50%;
-  color: #000;
   padding: 0.5rem;
   border: 1px solid #000;
+  color: #000;
 }
 .link_wrap_profile {
   cursor: none;
@@ -753,9 +716,9 @@ canvas {
   right: 10%;
   opacity: 0;
   display: flex;
-  gap: 1rem;
   justify-content: flex-end;
   align-items: center;
+  gap: 1rem;
   color: var(--main-color-black);
   font-family: var(--Montserrat);
   transition: opacity 0.5s ease;
@@ -798,7 +761,9 @@ canvas {
   }
 }
 
-/* profile */
+/*======================================================
+                        Profile
+======================================================*/
 #profile {
   position: relative;
   display: flex;
@@ -975,9 +940,10 @@ canvas {
   width: 0.8rem;
   height: 0.8rem;
 }
-/* ---------------------------------------------------------------- */
 
-/* index */
+/*======================================================
+                        Index
+======================================================*/
 #index {
   width: 100vw;
   height: 100vh;
@@ -1022,9 +988,9 @@ canvas {
   border-bottom: 1px solid var(--main-color-black);
 }
 .index_list .list span {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   margin: 1.8vh 0;
   transition: transform 0.5s ease;
 }
@@ -1056,26 +1022,27 @@ canvas {
   transition: transform 0.5s ease;
 }
 .index_list .list:nth-of-type(2) .list_ani::after {
-  content: 'SAMSUNG EM';
+  content: 'SENTENCE U';
 }
 .index_list .list:nth-of-type(3) .list_ani::after {
-  content: 'CJ ONE';
-}
-.index_list .list:nth-of-type(4) .list_ani::after {
-  content: 'Dalkomm Coffee';
-}
-.index_list .list:nth-of-type(5) .list_ani::after {
   content: 'Messenger';
 }
-.index_list .list:nth-of-type(6) .list_ani::after {
+.index_list .list:nth-of-type(4) .list_ani::after {
   content: "What's Movie";
 }
-.index_list .list:nth-of-type(7) .list_ani::after {
-  content: 'Family Park';
+.index_list .list:nth-of-type(5) .list_ani::after {
+  content: 'SAMSUNG EM';
 }
-/* ---------------------------------------------------------------- */
+.index_list .list:nth-of-type(6) .list_ani::after {
+  content: 'CJ ONE';
+}
+.index_list .list:nth-of-type(7) .list_ani::after {
+  content: 'Dalkomm Coffee';
+}
 
-/* project */
+/*======================================================
+                        Project
+======================================================*/
 #project {
   position: relative;
   width: 600vw;
@@ -1200,181 +1167,6 @@ canvas {
     background-position-y: 100%;
   }
 }
-/* --------Mockup---------- */
-/* iMac */
-.mockup_01_iMac,
-.mockup_02_iMac,
-.mockup_03_iMac,
-.mockup_05_iMac {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  transform: translate(-50%, -50%);
-}
-.mockup_02_iMac,
-.mockup_03_iMac {
-  width: 60%;
-  transform: translate(-50%, -80%);
-}
-.mockup_01_iMac img,
-.mockup_02_iMac img,
-.mockup_03_iMac img,
-.mockup_05_iMac img {
-  position: relative;
-  width: 100%;
-}
-.mockup_01_iMac .screen,
-.mockup_02_iMac .screen,
-.mockup_03_iMac .screen,
-.mockup_05_iMac .screen {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  width: 90%;
-  height: 63%;
-  background-size: cover;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  transform: translate(-50%, 0);
-  animation: mockup_ani 20s linear 0s infinite alternate;
-}
-.mockup_01_iMac .screen {
-  background-image: url(../../assets/capture/samsung_em.png);
-}
-.mockup_02_iMac .screen {
-  background-image: url(../../assets/capture/CJ_ONE_PC.png);
-}
-.mockup_03_iMac .screen {
-  background-image: url(../../assets/capture/dalkomm_PC.png);
-}
-.mockup_05_iMac .screen {
-  animation: none;
-}
-/* Macbook */
-.mockup_02_Macbook,
-.mockup_03_Macbook {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  transform: translate(-90%, -50%);
-}
-.mockup_02_Macbook > img,
-.mockup_03_Macbook > img {
-  position: relative;
-  width: 100%;
-}
-.mockup_02_Macbook > .screen,
-.mockup_03_Macbook > .screen {
-  position: absolute;
-  top: 3%;
-  left: 50%;
-  width: 76%;
-  height: 77%;
-  border-radius: 5px;
-  background-size: cover;
-  background-position: 0% 0%;
-  background-repeat: no-repeat;
-  transform: translate(-50%, 0);
-  animation: mockup_ani 20s linear 0s infinite alternate;
-}
-.mockup_02_Macbook > .screen {
-  background-image: url(../../assets/capture/CJ_ONE_PC.png);
-}
-.mockup_03_Macbook > .screen {
-  background-image: url(../../assets/capture/dalkomm_PC.png);
-}
-/* iPad */
-.mockup_02_iPad,
-.mockup_03_iPad {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 35%;
-  transform: translate(-40%, 0);
-}
-.mockup_02_iPad > img,
-.mockup_03_iPad > img {
-  position: relative;
-  width: 100%;
-}
-.mockup_02_iPad > .screen,
-.mockup_03_iPad > .screen {
-  position: absolute;
-  top: 6%;
-  left: 50%;
-  width: 85%;
-  height: 88%;
-  border-radius: 5px;
-  background-size: cover;
-  background-position: 0% 0%;
-  background-repeat: no-repeat;
-  transform: translate(-50%, 0);
-  animation: mockup_ani 20s linear 0s infinite alternate;
-  background-image: url(../../assets/capture/CJ_ONE_Tablet.png);
-}
-.mockup_02_iPad > .screen {
-  background-image: url(../../assets/capture/CJ_ONE_Tablet.png);
-}
-.mockup_03_iPad > .screen {
-  background-image: url(../../assets/capture/dalkomm_Tablet.png);
-}
-/* iPhone */
-.mockup_02_iPhone,
-.mockup_03_iPhone,
-.mockup_04_iPhone,
-.mockup_06_iPhone {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 25%;
-  transform: translate(60%, -40%);
-}
-.mockup_04_iPhone,
-.mockup_06_iPhone {
-  width: 50%;
-  transform: translate(-50%, -50%);
-}
-.mockup_02_iPhone > img,
-.mockup_03_iPhone > img,
-.mockup_04_iPhone > img,
-.mockup_06_iPhone > img {
-  position: relative;
-  width: 100%;
-}
-.mockup_02_iPhone > .screen,
-.mockup_03_iPhone > .screen,
-.mockup_04_iPhone > .screen,
-.mockup_06_iPhone > .screen {
-  position: absolute;
-  top: 3%;
-  left: 50%;
-  width: 68%;
-  height: 89%;
-  background-size: cover;
-  background-position: 0% 0%;
-  background-repeat: no-repeat;
-  transform: translate(-50%, 0);
-  animation: mockup_ani 20s linear 0s infinite alternate;
-}
-.mockup_04_iPhone > .screen,
-.mockup_06_iPhone > .screen {
-  height: 89%;
-}
-.mockup_02_iPhone > .screen {
-  background-image: url(../../assets/capture/CJ_ONE_Mobile.png);
-}
-.mockup_03_iPhone > .screen {
-  background-image: url(../../assets/capture/dalkomm_Mobile.png);
-}
-.mockup_04_iPhone > .screen {
-  animation: none;
-}
-.mockup_06_iPhone > .screen {
-  background-image: url(../../assets/capture/Family_Park_1.png);
-}
-/* -------------//----------- */
 .project_container_desc {
   display: flex;
   flex-direction: column;
@@ -1472,9 +1264,193 @@ canvas {
 .project_container_desc_link_wrap a:hover .arrow {
   left: 0.8rem;
 }
-/* ---------------------------------------------------------------- */
 
-/* contact */
+/*======================================================
+                  Project - Mockup(iMac)
+======================================================*/
+.mockup_01_iMac,
+.mockup_03_iMac,
+.mockup_04_iMac,
+.mockup_05_iMac,
+.mockup_06_iMac {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+}
+.mockup_05_iMac,
+.mockup_06_iMac {
+  width: 60%;
+  transform: translate(-50%, -80%);
+}
+.mockup_01_iMac img,
+.mockup_03_iMac img,
+.mockup_04_iMac img,
+.mockup_05_iMac img,
+.mockup_06_iMac img {
+  position: relative;
+  width: 100%;
+}
+.mockup_01_iMac .screen,
+.mockup_03_iMac .screen,
+.mockup_04_iMac .screen,
+.mockup_05_iMac .screen,
+.mockup_06_iMac .screen {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 90%;
+  height: 63%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transform: translate(-50%, 0);
+  animation: mockup_ani 20s linear 0s infinite alternate;
+}
+.mockup_01_iMac .screen {
+  width: 100%;
+  transform: translate(-50%, 0) scaleX(0.9);
+  animation: none;
+}
+.mockup_03_iMac .screen {
+  animation: none;
+}
+.mockup_04_iMac .screen {
+  background-image: url(../../assets/capture/samsung_em.png);
+}
+.mockup_05_iMac .screen {
+  background-image: url(../../assets/capture/CJ_ONE_PC.png);
+}
+.mockup_06_iMac .screen {
+  background-image: url(../../assets/capture/dalkomm_PC.png);
+}
+
+/*======================================================
+                Project - Mockup(Macbook)
+======================================================*/
+.mockup_05_Macbook,
+.mockup_06_Macbook {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-90%, -50%);
+}
+.mockup_05_Macbook > img,
+.mockup_06_Macbook > img {
+  position: relative;
+  width: 100%;
+}
+.mockup_05_Macbook > .screen,
+.mockup_06_Macbook > .screen {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  width: 76%;
+  height: 77%;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  transform: translate(-50%, 0);
+  animation: mockup_ani 20s linear 0s infinite alternate;
+}
+.mockup_05_Macbook > .screen {
+  background-image: url(../../assets/capture/CJ_ONE_PC.png);
+}
+.mockup_06_Macbook > .screen {
+  background-image: url(../../assets/capture/dalkomm_PC.png);
+}
+
+/*======================================================
+                  Project - Mockup(iPad)
+======================================================*/
+.mockup_05_iPad,
+.mockup_06_iPad {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  transform: translate(-40%, 0);
+}
+.mockup_05_iPad > img,
+.mockup_06_iPad > img {
+  position: relative;
+  width: 100%;
+}
+.mockup_05_iPad > .screen,
+.mockup_06_iPad > .screen {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  width: 85%;
+  height: 88%;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  transform: translate(-50%, 0);
+  animation: mockup_ani 20s linear 0s infinite alternate;
+  background-image: url(../../assets/capture/CJ_ONE_Tablet.png);
+}
+.mockup_05_iPad > .screen {
+  background-image: url(../../assets/capture/CJ_ONE_Tablet.png);
+}
+.mockup_06_iPad > .screen {
+  background-image: url(../../assets/capture/dalkomm_Tablet.png);
+}
+
+/*======================================================
+                Project - Mockup(iPhone)
+======================================================*/
+
+.mockup_02_iPhone,
+.mockup_05_iPhone,
+.mockup_06_iPhone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  transform: translate(60%, -40%);
+}
+.mockup_02_iPhone {
+  width: 50%;
+  transform: translate(-50%, -50%);
+}
+.mockup_02_iPhone > img,
+.mockup_05_iPhone > img,
+.mockup_06_iPhone > img {
+  position: relative;
+  width: 100%;
+}
+.mockup_02_iPhone > .screen,
+.mockup_05_iPhone > .screen,
+.mockup_06_iPhone > .screen {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  width: 68%;
+  height: 89%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  transform: translate(-50%, 0);
+  animation: mockup_ani 20s linear 0s infinite alternate;
+}
+.mockup_02_iPhone > .screen {
+  height: 89%;
+}
+.mockup_05_iPhone > .screen {
+  background-image: url(../../assets/capture/CJ_ONE_Mobile.png);
+}
+.mockup_06_iPhone > .screen {
+  background-image: url(../../assets/capture/dalkomm_Mobile.png);
+}
+
+/*======================================================
+                        Contact
+======================================================*/
 #contact {
   position: relative;
   display: flex;
@@ -1600,9 +1576,10 @@ canvas {
   transform: translate(0, 0);
   transition: all 1s ease 0.5s;
 }
-/* ---------------------------------------------------------------- */
 
-/* Responsive */
+/*======================================================
+                      Responsive
+======================================================*/
 @media screen and (max-width: 1599px) {
   .project_container {
     width: 90%;
@@ -1814,8 +1791,8 @@ canvas {
     font-size: 0.6rem;
   }
   .contact_link {
-    gap: 2rem;
     flex-direction: column;
+    gap: 2rem;
   }
 }
 @media screen and (min-width: 768px) {

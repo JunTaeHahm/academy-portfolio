@@ -55,7 +55,6 @@ const project_section_wrap = document.querySelectorAll('.project_section > div')
 const project_link = document.querySelectorAll('.project_container_desc a');
 const project_video_mockup = document.querySelectorAll('video');
 const project_messenger = document.querySelector('.messenger');
-const project_familPark = document.querySelector('.mockup_06_iPhone > .screen');
 const project_01_check_result = document.querySelector('.project_01_check_result');
 const project_01_check_result_btn = document.querySelector('a.check_result');
 const project_01_check_result_close = document.querySelector('.result_close');
@@ -97,7 +96,7 @@ let containerHeight = winHeight * main_section.length;
 window.addEventListener('resize', () => {
   winHeight = window.innerHeight;
   winWidth = window.innerWidth;
-  main_section.forEach(item => {
+  main_section.forEach((item) => {
     item.style.height = `${winHeight}px`;
     body.style.height = `${containerHeight}px`;
   });
@@ -153,7 +152,7 @@ window.addEventListener('load', () => {
             canvas_wrap.style.transform = 'translate(50%,-50%)';
           }
           container.style.height = '';
-          circle_nav_wrap_span.forEach(item => item.classList.remove('active'));
+          circle_nav_wrap_span.forEach((item) => item.classList.remove('active'));
           circle_nav_wrap_span[0].classList.add('active');
           circle_nav_wrap.style.opacity = 1;
           circle_nav_wrap.style.transform = `rotate(-80deg)`;
@@ -251,7 +250,7 @@ for (let i = 1; i < index_list_span.length; i++) {
   });
   index_list_span[i].addEventListener('mouseleave', () => {
     canvasFunc(500, 500, 25, 50, 1, colorCodes[1]);
-    index_list.forEach(item => item.classList.remove('deactive'));
+    index_list.forEach((item) => item.classList.remove('deactive'));
   });
   // page routing
   index_list_span[i].addEventListener('click', () => {
@@ -278,14 +277,14 @@ function initProjectBanner() {
   for (let i = 0; i < project_banner.length; i++) {
     project_banner[i].style.transform = `rotateY(${i * 45}deg) translateZ(100rem)`;
   }
-  project_banner.forEach(item => item.classList.remove('focus'));
+  project_banner.forEach((item) => item.classList.remove('focus'));
 }
 function moveProjectBanner() {
   for (let i = 0; i < project_banner.length; i++) {
     project_banner[i].style.transform = `rotateY(${
       i * 45 - section_num * 45
     }deg) translateZ(100rem)`;
-    project_banner.forEach(item => item.classList.remove('focus'));
+    project_banner.forEach((item) => item.classList.remove('focus'));
     project_banner[section_num].classList.add('focus');
     project_section.style.left = `${winWidth * -section_num}px`;
   }
@@ -297,47 +296,47 @@ function moveProjectBanner() {
 }
 function changeProjectName(section_num) {
   switch (section_num) {
-    case 1: // 삼성전기
+    case 1: // 센텐스유
       arrow_prev = '&nbsp;&nbsp;';
       arrow_next = '&gt;';
-      div_category = 'Web Accessibility & Standard';
+      div_category = 'React+Node Project';
       div_num = '01';
-      div_name = 'SAMSUNG EM';
+      div_name = 'SENTENCE U';
       break;
-    case 2: // CJ ONE
-      arrow_prev = '&lt;';
-      arrow_next = '&gt;';
-      div_category = 'Responsive Web';
-      div_num = '02';
-      div_name = 'CJ ONE';
-      break;
-    case 3: // 달콤커피
-      arrow_prev = '&lt;';
-      arrow_next = '&gt;';
-      div_category = 'Responsive Web';
-      div_num = '03';
-      div_name = 'Dalkomm Coffee';
-      break;
-    case 4: // 메신저
+    case 2: // 메신저
       arrow_prev = '&lt;';
       arrow_next = '&gt;';
       div_category = 'React Project';
-      div_num = '04';
+      div_num = '02';
       div_name = 'Messenger';
       break;
-    case 5: // 영화 앱
+    case 3: // 영화 앱
       arrow_prev = '&lt;';
       arrow_next = '&gt;';
       div_category = 'React Project';
-      div_num = '05';
+      div_num = '03';
       div_name = `What's Movie`;
       break;
-    case 6: // 패밀리 파크
+    case 4: // CJ ONE
+      arrow_prev = '&lt;';
+      arrow_next = '&gt;';
+      div_category = 'Web Accessibillity & Standard';
+      div_num = '04';
+      div_name = 'SAMSUNG EM';
+      break;
+    case 5: //
+      arrow_prev = '&lt;';
+      arrow_next = '&gt;';
+      div_category = 'Responsive Web';
+      div_num = '05';
+      div_name = 'CJ ONE';
+      break;
+    case 6: // 달콤커피
       arrow_prev = '&lt;';
       arrow_next = '&nbsp;&nbsp;';
-      div_category = 'React Project';
+      div_category = 'Responsive Web';
       div_num = '06';
-      div_name = 'Family Park';
+      div_name = 'Dalkomm Coffee';
       break;
     default:
       break;
@@ -351,7 +350,7 @@ window.addEventListener('resize', () => {
   moveProjectBanner();
 });
 // prev button
-project_prev_btn.forEach(item =>
+project_prev_btn.forEach((item) =>
   item.addEventListener('click', () => {
     section_num--;
     if (section_num < 0) {
@@ -365,7 +364,7 @@ project_prev_btn.forEach(item =>
   }),
 );
 // next button
-project_next_btn.forEach(item =>
+project_next_btn.forEach((item) =>
   item.addEventListener('click', () => {
     section_num++;
     if (section_num >= project_section_wrap.length) {
@@ -380,7 +379,7 @@ project_next_btn.forEach(item =>
 );
 
 // Messenger 팝업창
-project_messenger.addEventListener('click', e => {
+project_messenger.addEventListener('click', (e) => {
   e.preventDefault();
   const url = 'https://juntaehahm.github.io/project-messenger/';
   const name = 'Messenger';
@@ -388,20 +387,6 @@ project_messenger.addEventListener('click', e => {
     'width = 500, height = 1000, top = 100, left = 200, location = no, toolbars = no, status = no, scrollbars = no';
   window.open(url, name, option);
 });
-
-// 패밀리파크 이미지 새로고침
-let familyParkImage = setInterval(refreshImg, 1500);
-let imgCount = 1;
-function refreshImg() {
-  if (imgCount >= 14) {
-    imgCount = 1;
-    project_familPark.style.backgroundImage = `url(assets/capture/Family_Park_${imgCount}.png)`;
-  }
-  if (imgCount > 0) {
-    project_familPark.style.backgroundImage = `url(assets/capture/Family_Park_${imgCount}.png)`;
-  }
-  imgCount++;
-}
 
 /* || Main Nav */
 let isMenuOpened = false;
@@ -416,13 +401,13 @@ header_menu.addEventListener('click', () => {
     main_nav.style.zIndex = '999';
     cursor.style.zIndex = '9999';
     setTimeout(() => {
-      main_nav_link.forEach(item => (item.style.transform = 'translate(0,0)'));
+      main_nav_link.forEach((item) => (item.style.transform = 'translate(0,0)'));
     }, 300);
   } else {
     // close
     header_menu_btn.innerHTML = 'Menu';
     cursor.style.zIndex = '99';
-    main_nav_link.forEach(item => (item.style.transform = 'translate(0,-150%)'));
+    main_nav_link.forEach((item) => (item.style.transform = 'translate(0,-150%)'));
     setTimeout(() => {
       header.classList.remove('active');
       main_nav.style.opacity = 0;
@@ -430,20 +415,20 @@ header_menu.addEventListener('click', () => {
     }, 300);
     setTimeout(() => {
       main_nav.style.zIndex = '-9999';
-      main_nav_link.forEach(item => (item.style.transform = 'translate(0,150%)'));
+      main_nav_link.forEach((item) => (item.style.transform = 'translate(0,150%)'));
     }, 600);
   }
 });
 for (let i = 0; i < main_nav_link.length; i++) {
   // hover event
   main_nav_link[i].addEventListener('mouseover', () => {
-    main_nav_link.forEach(item => item.classList.add('deactive'));
+    main_nav_link.forEach((item) => item.classList.add('deactive'));
     main_nav_link[i].classList.remove('deactive');
     main_nav_link[i].classList.add('active');
   });
   main_nav_link[i].addEventListener('mouseleave', () => {
-    main_nav_link.forEach(item => item.classList.remove('deactive'));
-    main_nav_link.forEach(item => item.classList.remove('active'));
+    main_nav_link.forEach((item) => item.classList.remove('deactive'));
+    main_nav_link.forEach((item) => item.classList.remove('active'));
   });
   // page routing
   main_nav_link[i].addEventListener('click', () => {
@@ -473,7 +458,7 @@ function deActiveRollingBanner() {
   rolling_banner.classList.remove('active');
 }
 function circleNavAction(idx, deg) {
-  circle_nav_wrap_span.forEach(item => item.classList.remove('active'));
+  circle_nav_wrap_span.forEach((item) => item.classList.remove('active'));
   circle_nav_wrap_span[idx].classList.add('active');
   circle_nav_wrap.style.transform = `rotate(${deg}deg)`;
 }
@@ -484,8 +469,8 @@ function deactiveIndex() {
   index_container.classList.remove('active');
 }
 function deactiveProject() {
-  project_banner.forEach(item => item.classList.remove('active'));
-  project_banner.forEach(item => item.classList.remove('focus'));
+  project_banner.forEach((item) => item.classList.remove('active'));
+  project_banner.forEach((item) => item.classList.remove('focus'));
   project_section.classList.remove('active');
   scroll_icon.style.opacity = 0;
 }
@@ -526,7 +511,7 @@ function pageEvent(page_num) {
       break;
     case 3: // project
       project_section.classList.add('active');
-      project_banner.forEach(item => item.classList.add('active'));
+      project_banner.forEach((item) => item.classList.add('active'));
       canvasFunc(500, 500, 55, -5, 1, colorCodes[section_num + 2]);
       setTimeout(() => {
         project_banner[section_num].classList.add('focus');
@@ -559,7 +544,7 @@ let page_num = 0;
 let isScrolling;
 window.addEventListener(
   'wheel',
-  e => {
+  (e) => {
     e.preventDefault();
     if (e.wheelDelta < 0) {
       // wheel down
@@ -598,8 +583,8 @@ for (let i = 0; i < circle_nav_wrap_span.length; i++) {
     winHeight = window.innerHeight;
   });
   // rotate animation
-  circle_nav_wrap_span[i].addEventListener('mouseover', e => {
-    circle_nav_wrap_span.forEach(item => {
+  circle_nav_wrap_span[i].addEventListener('mouseover', (e) => {
+    circle_nav_wrap_span.forEach((item) => {
       item.classList.remove('active');
     });
     e.currentTarget.classList.add('active');
@@ -608,10 +593,10 @@ for (let i = 0; i < circle_nav_wrap_span.length; i++) {
     }
   });
   // page routing
-  circle_nav_wrap_span[i].addEventListener('click', e => {
+  circle_nav_wrap_span[i].addEventListener('click', (e) => {
     page_num = i;
     pageEvent(page_num);
-    circle_nav_wrap_span.forEach(item => {
+    circle_nav_wrap_span.forEach((item) => {
       item.classList.remove('active');
     });
     e.currentTarget.classList.add('active');
@@ -627,7 +612,7 @@ function mainNavWrapMouseOut() {
   circle_nav_wrap.classList.remove('active');
   setTimeout(() => {
     if (circle_nav_wrap.classList.contains('active') === false) {
-      circle_nav_wrap_span.forEach(item => {
+      circle_nav_wrap_span.forEach((item) => {
         item.classList.remove('active');
       });
       circle_nav_wrap_span[page_num].classList.add('active');
@@ -638,7 +623,7 @@ function mainNavWrapMouseOut() {
 
 /* || Cursor Moving */
 function cursorMoving(event) {
-  document.addEventListener(event, e => {
+  document.addEventListener(event, (e) => {
     cursor.style.left = `${e.pageX}px`;
     cursor.style.top = `${e.pageY}px`;
   });
@@ -676,12 +661,12 @@ cursorHoveredScale(header_menu);
 cursorHoveredScale(header_portfolio);
 cursorHoveredMore(intro_link_wrap_profile);
 cursorHoveredMore(intro_link_wrap_project);
-circle_nav_wrap_span.forEach(item => cursorHoveredBlur(item));
-main_nav_link.forEach(item => cursorHoveredBlur(item));
-profile_desc_about_link.forEach(item => cursorHoveredScale(item));
-index_list_span.forEach(item => cursorHoveredBlur(item));
-project_link.forEach(item => cursorHoveredBlur(item));
-contact_link.forEach(item => cursorHoveredBlur(item));
+circle_nav_wrap_span.forEach((item) => cursorHoveredBlur(item));
+main_nav_link.forEach((item) => cursorHoveredBlur(item));
+profile_desc_about_link.forEach((item) => cursorHoveredScale(item));
+index_list_span.forEach((item) => cursorHoveredBlur(item));
+project_link.forEach((item) => cursorHoveredBlur(item));
+contact_link.forEach((item) => cursorHoveredBlur(item));
 for (let i = 0; i < project_next_btn.length - 1; i++) {
   cursorHoveredBlur(project_next_btn[i]);
 }
@@ -693,14 +678,22 @@ for (let i = 1; i < project_next_btn.length; i++) {
 const colorCodes = [
   '238,236,229', // 투명
   '48,62,79', // 기본
-  '0,0,0', // 삼성전기
-  '46,125,50', // CJ ONE
-  '27,0,0', // 달콤커피
-  '255,107,26', // 메신저
-  '213,0,0', // 왓츠무비
-  '48,62,79', // 패밀리파크
+  '48,62,79', // 센텐스유
+  '142, 68, 173', // 메신저
+  '44, 62, 80', // 왓츠무비
+  '52, 152, 219', // 삼성전기
+  '39, 174, 96', // CJ ONE
+  '211, 84, 0', // 달콤커피
 ];
-
+/**
+ *
+ * @param {*} canvas_width
+ * @param {*} canvas_height
+ * @param {*} right
+ * @param {*} top
+ * @param {*} opacity
+ * @param {*} colorCode
+ */
 function canvasFunc(canvas_width, canvas_height, right, top, opacity, colorCode) {
   let width;
   let height;
