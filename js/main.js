@@ -1,7 +1,7 @@
 'use strict';
-// main.js
-/* --------------------------------------------------------Variable */
-/* || Static variable */
+/*======================================================
+                        변수
+======================================================*/
 const body = document.querySelector('body');
 const container = document.querySelector('#container ');
 const main_section = document.querySelectorAll('#container section');
@@ -11,17 +11,17 @@ const scroll_icon = document.querySelector('.scroll_icon');
 const circle_nav_wrap = document.querySelector('.circle_nav_wrap');
 const circle_nav_wrap_span = document.querySelectorAll('.circle_nav_wrap span');
 
-/* || Main nav variable */
+/* Main nav variable */
 const main_nav = document.querySelector('#main_nav');
 const main_nav_link = document.querySelectorAll('.main_nav_wrap ul li span');
 
-/* || Header variable */
+/* Header variable */
 const header = document.querySelector('#header');
 const header_menu = document.querySelector('.header_menu');
 const header_menu_btn = document.querySelector('.header_menu_btn');
 const header_portfolio = document.querySelector('.header_portfolio');
 
-/* || intro variable */
+/* intro variable */
 const canvas_wrap = document.querySelector('canvas');
 const loading = document.querySelector('.loading');
 const loading_bg1 = document.querySelector('.loading_bg1');
@@ -40,16 +40,16 @@ const intro_link_wrap_profile = document.querySelector('.link_wrap_profile');
 const intro_link_wrap_project = document.querySelector('.link_wrap_project');
 const intro_link_bg = document.querySelector('.intro_text .link_wrap_bg');
 
-/* || Profile variable */
+/* Profile variable */
 const profile_container = document.querySelector('.profile_container');
 const profile_desc_about_link = document.querySelectorAll('.profile_desc_about_text a');
 
-/* || Index variable */
+/* Index variable */
 const index_container = document.querySelector('.index_container');
 const index_list = document.querySelectorAll('.index_container .list');
 const index_list_span = document.querySelectorAll('.index_container .list');
 
-/* || Project variable */
+/* Project variable */
 const project_section = document.querySelector('.project_section');
 const project_section_wrap = document.querySelectorAll('.project_section > div');
 const project_link = document.querySelectorAll('.project_container_desc a');
@@ -82,14 +82,16 @@ const project_banner_name = document.querySelector('.project_banner_name');
 const project_banner_category = document.querySelector('.project_banner_category');
 const project_prev_btn = document.querySelectorAll('.project_banner_arrow_prev');
 const project_next_btn = document.querySelectorAll('.project_banner_arrow_next');
-/* ---------------------------------------------------------------- */
 
-/* || Contact variable */
+/* Contact variable */
 const contact_container = document.querySelector('.contact_container');
 const contact_link = document.querySelectorAll('.contact_link a');
 const contact_footer = document.querySelector('.contact_footer');
 
-// || Body Height
+/*======================================================
+                      Static
+======================================================*/
+/* body 사이즈 지정 */
 let winWidth = window.innerWidth;
 let winHeight = window.innerHeight;
 let containerHeight = winHeight * main_section.length;
@@ -102,7 +104,7 @@ window.addEventListener('resize', () => {
   });
 });
 
-/* || Top Button */
+/* 탑버튼 클릭 시 top 0, 페이지 0 */
 header_portfolio.addEventListener('click', () => {
   page_num = 0;
   pageEvent(page_num);
@@ -113,15 +115,18 @@ header_portfolio.addEventListener('click', () => {
   });
 });
 
-/* || Intro */
+/*======================================================
+                      Intro
+======================================================*/
 window.addEventListener('load', () => {
-  // move to top
+  // 스크롤 top 0
   window.scroll({
     top: 0,
     left: 0,
     behavior: 'smooth',
   });
-  // loading
+
+  /* 로딩 인터랙션 */
   let width = 0;
   let perc = setInterval(intro, 15);
   function intro() {
@@ -189,10 +194,11 @@ window.addEventListener('load', () => {
       }
     }, 0);
   }
-  // hide canvas
+  // 캔버스 숨기기:
   canvas_wrap.style.transform = 'translate(300%,-50%)';
 });
-// intro text color blink animation
+
+/* 텍스트 깜빡임 애니메이션 */
 let blinkAni = setInterval(textBlink, 1500);
 let blinkCount = 1;
 function textBlink() {
@@ -204,7 +210,8 @@ function textBlink() {
   intro_text_blink[blinkCount].style.color = 'var(--point-color-orange)';
   blinkCount++;
 }
-// intro link box animation
+
+/* 링크 박스 호버 애니메이션 */
 intro_link_wrap_profile.addEventListener('mouseover', () => {
   intro_link_bg.style.opacity = 1;
   intro_link_bg.style.left = 0;
@@ -224,7 +231,8 @@ intro_link_wrap_project.addEventListener('mouseleave', () => {
   intro_link_bg.style.transformOrigin = 'bottom left';
   intro_link_bg.style.transform = 'scaleX(0)';
 });
-// intro link box event
+
+/* 링크 박스 클릭 이벤트 */
 intro_link_wrap_project.addEventListener('click', () => {
   page_num = 2;
   window.scroll({
@@ -235,10 +243,12 @@ intro_link_wrap_project.addEventListener('click', () => {
   pageEvent(page_num);
 });
 
-/* || Index */
+/*======================================================
+                      Index
+======================================================*/
 let section_num = 0;
 for (let i = 1; i < index_list_span.length; i++) {
-  // hover event
+  /* 리스트 호버 애니메이션 */
   index_list_span[i].addEventListener('mouseover', () => {
     if (page_num === 2) {
       for (let i = 1; i < index_list_span.length; i++) {
@@ -252,7 +262,8 @@ for (let i = 1; i < index_list_span.length; i++) {
     canvasFunc(500, 500, 25, 50, 1, colorCodes[1]);
     index_list.forEach((item) => item.classList.remove('deactive'));
   });
-  // page routing
+
+  /* 리스트 클릭 시 페이지 라우팅 */
   index_list_span[i].addEventListener('click', () => {
     section_num = i - 1;
     page_num = 3;
@@ -271,14 +282,18 @@ for (let i = 1; i < index_list_span.length; i++) {
   });
 }
 
-/* || Project */
-// init
+/*======================================================
+                    Project
+======================================================*/
+/* 초기화 함수 */
+// 1. 배너 초기화 함수
 function initProjectBanner() {
   for (let i = 0; i < project_banner.length; i++) {
     project_banner[i].style.transform = `rotateY(${i * 45}deg) translateZ(100rem)`;
   }
   project_banner.forEach((item) => item.classList.remove('focus'));
 }
+// 2. 프로젝트 배너 이동 함수
 function moveProjectBanner() {
   for (let i = 0; i < project_banner.length; i++) {
     project_banner[i].style.transform = `rotateY(${
@@ -294,6 +309,7 @@ function moveProjectBanner() {
     scroll_icon.style.opacity = 0;
   }
 }
+// 3. 프로젝트명 변경 함수
 function changeProjectName(section_num) {
   switch (section_num) {
     case 1: // 센텐스유
@@ -342,6 +358,7 @@ function changeProjectName(section_num) {
       break;
   }
 }
+// 4. 윈도우 로드/리사이즈 시 프로젝트 초기화
 window.addEventListener('load', () => {
   initProjectBanner();
 });
@@ -349,7 +366,8 @@ window.addEventListener('resize', () => {
   initProjectBanner();
   moveProjectBanner();
 });
-// prev button
+
+/* 이전 프로젝트 */
 project_prev_btn.forEach((item) =>
   item.addEventListener('click', () => {
     section_num--;
@@ -363,7 +381,7 @@ project_prev_btn.forEach((item) =>
     }
   }),
 );
-// next button
+/* 다음 프로젝트 */
 project_next_btn.forEach((item) =>
   item.addEventListener('click', () => {
     section_num++;
@@ -378,7 +396,7 @@ project_next_btn.forEach((item) =>
   }),
 );
 
-// Messenger 팝업창
+/* 메신저 App 클릭 시 팝업창 */
 project_messenger.addEventListener('click', (e) => {
   e.preventDefault();
   const url = 'https://juntaehahm.github.io/project-messenger/';
@@ -388,12 +406,14 @@ project_messenger.addEventListener('click', (e) => {
   window.open(url, name, option);
 });
 
-/* || Main Nav */
+/*======================================================
+                    Main Nav
+======================================================*/
 let isMenuOpened = false;
 header_menu.addEventListener('click', () => {
   isMenuOpened = !isMenuOpened;
   if (isMenuOpened) {
-    // open
+    // OPEN
     header.classList.add('active');
     header_menu_btn.innerHTML = 'Close';
     header_portfolio.style.display = 'none';
@@ -404,7 +424,7 @@ header_menu.addEventListener('click', () => {
       main_nav_link.forEach((item) => (item.style.transform = 'translate(0,0)'));
     }, 300);
   } else {
-    // close
+    // CLOSE
     header_menu_btn.innerHTML = 'Menu';
     cursor.style.zIndex = '99';
     main_nav_link.forEach((item) => (item.style.transform = 'translate(0,-150%)'));
@@ -420,7 +440,7 @@ header_menu.addEventListener('click', () => {
   }
 });
 for (let i = 0; i < main_nav_link.length; i++) {
-  // hover event
+  // 호버 이벤트
   main_nav_link[i].addEventListener('mouseover', () => {
     main_nav_link.forEach((item) => item.classList.add('deactive'));
     main_nav_link[i].classList.remove('deactive');
@@ -430,7 +450,8 @@ for (let i = 0; i < main_nav_link.length; i++) {
     main_nav_link.forEach((item) => item.classList.remove('deactive'));
     main_nav_link.forEach((item) => item.classList.remove('active'));
   });
-  // page routing
+
+  // 리스트 클릭 시 페이지 라우팅
   main_nav_link[i].addEventListener('click', () => {
     isMenuOpened = !isMenuOpened;
     page_num = i + 1;
@@ -448,9 +469,10 @@ for (let i = 0; i < main_nav_link.length; i++) {
     }, 300);
   });
 }
-/* ---------------------------------------------------------------- */
-
-/* || Page Evnet */
+/*======================================================
+                    페이지 이벤트
+======================================================*/
+/* 페이지 별 필요 함수 */
 function activeRollingBanner() {
   rolling_banner.classList.add('active');
 }
@@ -478,6 +500,8 @@ function deactiveContact() {
   contact_container.classList.remove('active');
   contact_footer.classList.remove('active');
 }
+
+/* 페이지 이벤트 */
 function pageEvent(page_num) {
   switch (page_num) {
     case 0: // intro
@@ -539,41 +563,91 @@ function pageEvent(page_num) {
   }
 }
 
-/* || Scroll Event */
+/*======================================================
+                    페이지 이동 액션
+======================================================*/
+/* 페이지 이동 함수 */
+function movePrevPage() {
+  if (page_num === 0) return;
+  if (container.style.height === '' && isMenuOpened === false) {
+    page_num--;
+    pageEvent(page_num);
+    window.scrollTo({
+      top: winHeight * page_num,
+      behavior: 'smooth',
+    });
+  }
+}
+function moveNextPage() {
+  if (page_num >= 4) return;
+  if (container.style.height === '' && isMenuOpened === false) {
+    page_num++;
+    pageEvent(page_num);
+    window.scrollTo({
+      top: winHeight * page_num,
+      behavior: 'smooth',
+    });
+  }
+}
+
+/* 마우스 스크롤로 이동 시 */
 let page_num = 0;
 let isScrolling;
 window.addEventListener(
   'wheel',
   (e) => {
     e.preventDefault();
-    if (e.wheelDelta < 0) {
-      // wheel down
-      if (page_num >= 4) return;
-      if (container.style.height === '' && isMenuOpened === false) {
-        page_num++;
-        pageEvent(page_num);
-      }
-    } else if (e.wheelDelta > 0) {
+    if (e.wheelDelta > 0) {
       // wheel up
-      if (page_num === 0) return;
-      if (container.style.height === '' && isMenuOpened === false) {
-        page_num--;
-        pageEvent(page_num);
-      }
+      movePrevPage();
+    } else if (e.wheelDelta < 0) {
+      // wheel down
+      moveNextPage();
+    }
+  },
+  { passive: false },
+);
+
+/* 키보드 화살표로 이동 시 */
+window.addEventListener(
+  'keydown',
+  (e) => {
+    if (e.code === 'ArrowUp') {
+      // 위화살표 키 눌렀을 때:
+      movePrevPage();
+    } else if (e.code === 'ArrowDown') {
+      // 아래화살표 키 눌렀을때:
+      moveNextPage();
     }
     window.scrollTo({
       top: winHeight * page_num,
-      left: 0,
       behavior: 'smooth',
     });
   },
   { passive: false },
 );
 
-/* || Circle Nav */
+/*======================================================
+                  Circle Navigtion
+======================================================*/
+/* 마우스가 nav 밖으로 나가면 현재 페이지의 메뉴로 회전해주는 함수 */
+function mainNavWrapMouseOut() {
+  circle_nav_wrap.classList.remove('active');
+  setTimeout(() => {
+    if (circle_nav_wrap.classList.contains('active') === false) {
+      circle_nav_wrap_span.forEach((item) => {
+        item.classList.remove('active');
+      });
+      circle_nav_wrap_span[page_num].classList.add('active');
+      circle_nav_wrap.style.transform = `rotate(${-80 + page_num * 40}deg)`;
+    }
+  }, 1000);
+}
+/* 마우스 호버 시 해당 페이지의 메뉴 활성화 */
 circle_nav_wrap.addEventListener('mouseover', () => {
   circle_nav_wrap.classList.add('active');
 });
+/* 마우스 아웃 시 현재 페이지의 메뉴 활성화 */
 circle_nav_wrap.addEventListener('mouseout', () => {
   mainNavWrapMouseOut();
 });
@@ -582,7 +656,7 @@ for (let i = 0; i < circle_nav_wrap_span.length; i++) {
   window.addEventListener('resize', () => {
     winHeight = window.innerHeight;
   });
-  // rotate animation
+  // 회전 애니메이션
   circle_nav_wrap_span[i].addEventListener('mouseover', (e) => {
     circle_nav_wrap_span.forEach((item) => {
       item.classList.remove('active');
@@ -592,7 +666,7 @@ for (let i = 0; i < circle_nav_wrap_span.length; i++) {
       circle_nav_wrap.style.transform = `rotate(${-80 + i * 40}deg)`;
     }
   });
-  // page routing
+  // 메뉴 클릭 시 페이지 라우팅
   circle_nav_wrap_span[i].addEventListener('click', (e) => {
     page_num = i;
     pageEvent(page_num);
@@ -607,32 +681,24 @@ for (let i = 0; i < circle_nav_wrap_span.length; i++) {
     });
   });
 }
-// active current page
-function mainNavWrapMouseOut() {
-  circle_nav_wrap.classList.remove('active');
-  setTimeout(() => {
-    if (circle_nav_wrap.classList.contains('active') === false) {
-      circle_nav_wrap_span.forEach((item) => {
-        item.classList.remove('active');
-      });
-      circle_nav_wrap_span[page_num].classList.add('active');
-      circle_nav_wrap.style.transform = `rotate(${-80 + page_num * 40}deg)`;
-    }
-  }, 1000);
-}
 
-/* || Cursor Moving */
+/*======================================================
+                  Cursor Event
+======================================================*/
+/* 기본 커서 이동 함수 */
 function cursorMoving(event) {
   document.addEventListener(event, (e) => {
     cursor.style.left = `${e.pageX}px`;
     cursor.style.top = `${e.pageY}px`;
   });
 }
-cursorMoving('mousemove');
-cursorMoving('scroll');
-cursorMoving('wheel');
 
-/* || Cursor Event */
+/* 아래 모든 조건에 커서가 이동 해야함 */
+cursorMoving('mousemove'); // 마우스 이동 시
+cursorMoving('scroll'); // 마우스 스크롤 시
+cursorMoving('wheel'); // 마우스 휠 시
+
+/* 요소별 호버 이벤트 함수 */
 function cursorHoveredMore(item) {
   item.addEventListener('mouseover', () => {
     cursor.classList.add('hovered-more');
@@ -657,16 +723,20 @@ function cursorHoveredScale(item) {
     cursor.classList.remove('hovered-scale');
   });
 }
+
+/* 호버 이벤트 함수 적용 */
 cursorHoveredScale(header_menu);
 cursorHoveredScale(header_portfolio);
 cursorHoveredMore(intro_link_wrap_profile);
 cursorHoveredMore(intro_link_wrap_project);
+
 circle_nav_wrap_span.forEach((item) => cursorHoveredBlur(item));
 main_nav_link.forEach((item) => cursorHoveredBlur(item));
 profile_desc_about_link.forEach((item) => cursorHoveredScale(item));
 index_list_span.forEach((item) => cursorHoveredBlur(item));
 project_link.forEach((item) => cursorHoveredBlur(item));
 contact_link.forEach((item) => cursorHoveredBlur(item));
+
 for (let i = 0; i < project_next_btn.length - 1; i++) {
   cursorHoveredBlur(project_next_btn[i]);
 }
@@ -674,7 +744,10 @@ for (let i = 1; i < project_next_btn.length; i++) {
   cursorHoveredBlur(project_prev_btn[i]);
 }
 
-/* || Draw Canvas */
+/*======================================================
+                    캔버스 인터랙션
+======================================================*/
+/* 프로젝트 별 색상 코드 지정 */
 const colorCodes = [
   '238,236,229', // 투명
   '48,62,79', // 기본
@@ -685,8 +758,9 @@ const colorCodes = [
   '39, 174, 96', // CJ ONE
   '211, 84, 0', // 달콤커피
 ];
+
 /**
- *
+ * @description 캔버스 도형의 크기/위치/투명도/색상을 받아 그려주는 함수
  * @param {*} canvas_width
  * @param {*} canvas_height
  * @param {*} right
@@ -826,4 +900,6 @@ function canvasFunc(canvas_width, canvas_height, right, top, opacity, colorCode)
     return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
   }
 }
+
+/* 초기 1회 실행 */
 canvasFunc(500, 500, 20, 25, 1, colorCodes[1]);
