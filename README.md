@@ -1,6 +1,6 @@
 ## JunTae Hahm | Portfolio
 
-<a href="https://juntaehahm.github.io/Portfolio" target="_blank">Portfolio</a>
+<a href="https://juntaehahm.github.io/Portfolio">Portfolio</a>
 
 <img width="2560" src="https://user-images.githubusercontent.com/111362079/208700372-3b6bdeb5-9f95-49ad-85ac-355c21054fd5.png">
 <img width="2560" src="https://user-images.githubusercontent.com/111362079/208844193-28df984a-57f2-4b7f-99e0-c078db1857c2.png">
